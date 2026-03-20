@@ -28,7 +28,6 @@
       overflow-x: hidden;
     }
 
-    /* noise overlay */
     body::before {
       content: '';
       position: fixed; inset: 0;
@@ -36,7 +35,6 @@
       pointer-events: none; z-index: 999; opacity: 0.5;
     }
 
-    /* ambient glow */
     .glow {
       position: fixed; top: -200px; left: 50%;
       transform: translateX(-50%);
@@ -45,7 +43,6 @@
       pointer-events: none; z-index: 0;
     }
 
-    /* ── MAIN ── */
     main {
       flex: 1;
       position: relative; z-index: 1;
@@ -67,7 +64,6 @@
       opacity: 0;
     }
 
-    /* ── LOGO ── */
     .logo-area {
       animation: fadeUp 1s ease both 0.5s;
       opacity: 0;
@@ -79,21 +75,6 @@
       object-fit: contain;
       display: block;
       margin: 0 auto 28px;
-    }
-
-    /* placeholder enquanto não há logo */
-    .logo-placeholder {
-      width: 220px;
-      height: 90px;
-      border: 1px dashed var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 28px;
-      color: var(--text-muted);
-      font-size: 0.58rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
     }
 
     .company-name {
@@ -126,7 +107,6 @@
       opacity: 0;
     }
 
-    /* ── FOOTER / EM CONSTRUÇÃO ── */
     footer {
       position: relative; z-index: 1;
       background: var(--dark-soft);
@@ -176,40 +156,12 @@
 
     .construction-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.6rem, 3vw, 2.4rem);
-      font-weight: 300;
-      color: var(--text);
-      margin-bottom: 0;
-      position: relative;
-    }
-
-    .construction-title {
-      font-family: 'Cormorant Garamond', serif;
       font-size: 1.7rem;
       font-weight: 300;
       color: var(--text);
       margin-bottom: 14px;
       position: relative;
     }
-
-    .construction-contact {
-      font-size: 0.67rem;
-      font-weight: 300;
-      color: var(--text-muted);
-      letter-spacing: 0.1em;
-      line-height: 2;
-      position: relative;
-      margin-bottom: 36px;
-    }
-
-    .construction-contact a {
-      color: var(--gold-light);
-      text-decoration: none;
-      letter-spacing: 0.06em;
-      transition: color 0.3s;
-    }
-
-    .construction-contact a:hover { color: var(--text); }
 
     .footer-copy {
       font-size: 0.54rem;
@@ -220,7 +172,6 @@
       margin-top: 28px;
     }
 
-    /* ── EMAIL DESTAQUE ── */
     .email-area {
       animation: fadeUp 1s ease both 1s;
       opacity: 0;
@@ -255,7 +206,6 @@
       border-color: var(--gold);
     }
 
-    /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -278,12 +228,7 @@
 
 <main>
   <div class="logo-area">
-    <!--
-      Quando tiver o logótipo, substitua o bloco logo-placeholder por:
-      <img class="logo-img" src="logo.png" alt="Keep" />
-    -->
-    <div class=img class="logo-img" src="logo.png" alt="Keep" />[ Logótipo ]</div>
-
+    <img class="logo-img" src="logo.png" alt="Keep" />
     <h1 class="company-name"><em>Keep</em></h1>
     <p class="company-sub">Gestão · Investimentos · Participações · S.A.</p>
   </div>
