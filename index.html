@@ -178,6 +178,90 @@
       text-align: center;
     }
 
+    /* ===== News/Blog Teaser Section ===== */
+    .news {
+      position: relative; z-index: 1;
+      padding: 90px 24px 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    .news-eyebrow {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 22px;
+    }
+
+    .news-card {
+      max-width: 560px;
+      width: 100%;
+      border: 1px solid var(--border);
+      background: rgba(184,154,90,0.05);
+      padding: 48px 40px;
+    }
+
+    .news-date {
+      font-size: 0.6rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+
+    .news-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 3.6vw, 2.3rem);
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.25;
+      margin-bottom: 18px;
+    }
+
+    .news-title em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .news-excerpt {
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 440px;
+      margin: 0 auto 30px;
+    }
+
+    .news-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 6px;
+      transition: color 0.3s, letter-spacing 0.3s;
+    }
+
+    .news-link:hover {
+      color: var(--text);
+      letter-spacing: 0.28em;
+    }
+
+    .news-link::after {
+      content: '→';
+      font-size: 0.85rem;
+    }
+
     .email-label {
       font-size: 0.55rem;
       letter-spacing: 0.35em;
@@ -239,6 +323,16 @@
     <a class="email-link" href="mailto:escritorio@keepgroup.com">escritorio@keepgroup.com</a>
   </div>
 </main>
+
+<section class="news">
+  <p class="news-eyebrow">Notícias</p>
+  <div class="news-card">
+    <p class="news-date">Setembro 2026 · Valadas Trinidad</p>
+    <h2 class="news-title">Junta-te à <em>nossa equipa</em> no Alentejo</h2>
+    <p class="news-excerpt">A Valadas Trinidad está a recrutar para as suas explorações em Elvas e Arronches — operadores de olival, agropecuários, auxiliares de campo e manutenção geral. Descobre as funções, requisitos e como te candidatares.</p>
+    <a class="news-link" href="https://agro.keepgroup.com" target="_blank" rel="noopener">Ler mais</a>
+  </div>
+</section>
 
 <footer>
   <div class="badge">
